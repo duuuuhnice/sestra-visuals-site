@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Diagnostic Style: if the site has a thin gold border, globals.css is loading */
+html {
+  border: 1px solid #D4AF37;
+}
+
 :root {
   --foreground-rgb: 44, 44, 44;
   --background-start-rgb: 253, 252, 251;

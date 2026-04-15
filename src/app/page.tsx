@@ -59,7 +59,7 @@ export default function Home() {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-32 md:py-48 bg-white overflow-hidden">
+      <section className="py-32 md:py-48 bg-sestra-cream overflow-hidden">
         <div className="editorial-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center text-left">
             <motion.div
@@ -112,7 +112,7 @@ export default function Home() {
               <motion.div 
                 key={item}
                 whileHover={{ y: -10 }}
-                className="group relative aspect-[3/4] overflow-hidden bg-white cursor-pointer"
+                className="group relative aspect-[3/4] overflow-hidden bg-sestra-cream cursor-pointer"
               >
                 <div className="absolute inset-0 bg-sestra-teal/0 group-hover:bg-sestra-teal/40 transition-all duration-700 z-10" />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20">
@@ -135,7 +135,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-6xl mb-12 font-serif font-light italic">
             Ready to elevate your <br className="hidden md:block" /> visual narrative?
           </h2>
-          <Link href="/contact" className="px-12 py-4 bg-white text-sestra-teal rounded-full text-sm uppercase tracking-widest hover:bg-sestra-sand transition-all">
+          <Link href="/contact" className="px-12 py-4 bg-sestra-cream text-sestra-teal rounded-full text-sm uppercase tracking-widest hover:bg-sestra-sand transition-all">
             Inquire Today
           </Link>
         </div>

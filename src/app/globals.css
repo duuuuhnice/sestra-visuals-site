@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Diagnostic Style: if the site has a thin gold border, globals.css is loading */
+/* Diagnostic Style: if the site has a thin mocha border, globals.css is loading */
 html {
-  border: 1px solid #D4AF37;
+  border: 1px solid #9B7B5B;
 }
 
 :root {
-  --foreground-rgb: 44, 44, 44;
-  --background-start-rgb: 253, 252, 251;
-  --background-end-rgb: 245, 239, 230;
+  --foreground-rgb: 91, 91, 44;
+  --background-start-rgb: 242, 235, 217;
+  --background-end-rgb: 214, 201, 174;
 }
 
 body {

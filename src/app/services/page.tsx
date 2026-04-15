@@ -51,7 +51,7 @@ export default function Services() {
 
           <div className="space-y-12">
             {packages.map((pkg, idx) => (
-              <div key={idx} className="bg-white p-12 md:p-16 border border-sestra-sand hover:shadow-2xl hover:shadow-sestra-teal/5 transition-all duration-700">
+              <div key={idx} className="bg-sestra-cream p-12 md:p-16 border border-sestra-sand hover:shadow-2xl hover:shadow-sestra-teal/5 transition-all duration-700">
                 <div className="flex flex-col md:flex-row justify-between gap-12">
                   <div className="space-y-6 flex-1">
                     <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-gold font-bold">{pkg.subtitle}</span>

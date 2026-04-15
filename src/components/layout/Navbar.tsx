@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-white/80 backdrop-blur-md py-4 border-b border-sestra-sand" : "bg-transparent py-8"
+        scrolled ? "bg-sestra-cream/80 backdrop-blur-md py-4 border-b border-sestra-sand" : "bg-transparent py-8"
       }`}
     >
       <div className="editorial-container flex justify-between items-center">
@@ -58,7 +58,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-white border-b border-sestra-sand py-10 md:hidden"
+            className="absolute top-full left-0 w-full bg-sestra-cream border-b border-sestra-sand py-10 md:hidden"
           >
             <div className="flex flex-col items-center space-y-8">
               {navLinks.map((link) => (

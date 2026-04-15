@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 export default function Portfolio() {
   const projects = [
-    { id: 1, title: "Lumina Wellness", category: "Branding", color: "bg-[#E6E2DF]" },
-    { id: 2, title: "The Coastal Edit", category: "Brand Identity", color: "bg-[#D9E2E2]" },
-    { id: 3, title: "Aura Skincare", category: "Packaging", color: "bg-[#E8D9D9]" },
-    { id: 4, title: "Nordic Haven", category: "Interior Curation", color: "bg-[#E2E6E8]" },
-    { id: 5, title: "Sōl Collective", category: "Strategy", color: "bg-[#F2EDE6]" },
-    { id: 6, title: "Verdant Living", category: "Digital Design", color: "bg-[#E2E8DF]" },
+    { id: 1, title: "Lumina Wellness", category: "Branding", color: "bg-[#E8E1CC]" },
+    { id: 2, title: "The Coastal Edit", category: "Brand Identity", color: "bg-[#D6C9AE]" },
+    { id: 3, title: "Aura Skincare", category: "Packaging", color: "bg-[#E0D5C0]" },
+    { id: 4, title: "Nordic Haven", category: "Interior Curation", color: "bg-[#C8C4A0]" },
+    { id: 5, title: "Sōl Collective", category: "Strategy", color: "bg-[#EDE6D2]" },
+    { id: 6, title: "Verdant Living", category: "Digital Design", color: "bg-[#D4D0B0]" },
   ];
 
   return (

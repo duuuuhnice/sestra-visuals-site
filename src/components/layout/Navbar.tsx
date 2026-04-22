@@ -28,9 +28,7 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
-        scrolled ? "bg-sestra-cream/90 backdrop-blur-md py-6 border-b border-sestra-teal/5" : "bg-transparent py-10"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-700 bg-sestra-cream/95 backdrop-blur-md py-6 border-b border-sestra-teal/5"
     >
       <div className="editorial-container flex justify-between items-center">
         <Link href="/" className="text-xl md:text-2xl font-serif tracking-[0.2em] text-sestra-teal uppercase">

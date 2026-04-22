@@ -23,10 +23,10 @@ const deliverables = [
 
 export default function BlandToBrand() {
   return (
-    <div className="bg-sestra-cream min-h-screen pt-24 lg:pt-0">
+    <div className="bg-sestra-cream min-h-screen">
       
       {/* Split Hero Section */}
-      <section className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[90vh] border-b border-sestra-teal/5">
+      <section className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[90vh] border-b border-sestra-teal/5 lg:pt-24 pt-32">
         
         {/* Left Side: Dark / Content */}
         <div className="bg-sestra-teal text-sestra-cream flex flex-col justify-center px-6 lg:px-20 py-24 lg:py-32 relative">

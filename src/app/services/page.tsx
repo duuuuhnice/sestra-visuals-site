@@ -10,6 +10,7 @@ const packages = [
     type: "THE FOUNDATION",
     title: "Essential Identity",
     timeline: "Investment timeline: 4 weeks",
+    investment: "INVESTMENT ON INQUIRY",
     description: "Your brand’s first full breath. The Essential Identity package is designed for founders who are ready to build a strong, strategic visual foundation — one that communicates credibility, clarity, and presence from day one.",
     deliverables: [
       "Core Brand Strategy",
@@ -23,6 +24,7 @@ const packages = [
     type: "THE FULL EMBODIMENT",
     title: "Signature Experience",
     timeline: "Investment timeline: 8 weeks",
+    investment: "INVESTMENT ON INQUIRY",
     description: "Our signature high-depth partnership. This transformation bridges the gap between your vision and a premium market presence. We dive deep into your brand’s soul and translate it into a comprehensive visual empire.",
     deliverables: [
       "Full Brand Strategy & Narrative",
@@ -35,9 +37,10 @@ const packages = [
     ]
   },
   {
-    type: "THE PRESERVATION",
+    type: "THE CREATIVE PARTNERSHIP",
     title: "Visual Curation",
     timeline: "Investment timeline: Monthly Retention",
+    investment: "MONTHLY RETAINER — ON INQUIRY",
     description: "A continuous partnership for the evolving brand. Designed for established visionaries who require ongoing creative direction, content curation, and brand preservation to ensure every touchpoint remains at the highest frequency.",
     deliverables: [
       "Monthly Creative Direction",
@@ -51,6 +54,7 @@ const packages = [
     type: "THE LEGACY BUILDER",
     title: "The Sovereign Brand Experience",
     timeline: "Investment timeline: 12+ Weeks",
+    investment: "LIMITED AVAILABILITY — ON INQUIRY",
     description: "The ultimate transformation for 8-figure founders and legacy-builders. This is a white-glove, full-spectrum experience that covers every high-stakes touchpoint of your brand, from deep frequency alignment to performance design.",
     deliverables: [
       "High-Depth Sovereign Branding",
@@ -58,7 +62,8 @@ const packages = [
       "Full Marketing Funnel Architecture",
       "Launch & Scale Creative Strategy",
       "Exclusive Monthly Strategy Retainer"
-    ]
+    ],
+    isDark: true
   }
 ];
 
@@ -113,31 +118,42 @@ export default function Services() {
         {/* Packages Grid */}
         <div className="space-y-48">
           {packages.map((pkg, idx) => (
-            <section key={idx} className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start border-t border-sestra-teal/5 pt-24">
+            <section 
+              key={idx} 
+              className={`grid grid-cols-1 lg:grid-cols-12 gap-20 items-start border-t border-sestra-teal/5 pt-24 ${pkg.isDark ? "bg-sestra-teal p-12 lg:p-20 text-sestra-cream border-none -mx-6 lg:-mx-20" : ""}`}
+            >
               <div className="lg:col-span-4 space-y-8">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/40 font-bold">{pkg.type}</span>
-                <h2 className="text-4xl md:text-6xl text-sestra-teal font-serif leading-tight">
+                <span className={`text-[10px] uppercase tracking-[0.4em] font-bold ${pkg.isDark ? "text-sestra-gold/80" : "text-sestra-teal/40"}`}>{pkg.type}</span>
+                <h2 className={`text-4xl md:text-6xl font-serif leading-tight ${pkg.isDark ? "text-sestra-cream" : "text-sestra-teal"}`}>
                   {pkg.title.split(' ').map((word, i) => (
                     <span key={i} className={i === 1 ? "serif-italic" : ""}>{word} </span>
                   ))}
                 </h2>
-                <p className="text-xs uppercase tracking-widest text-foreground/40 italic">{pkg.timeline}</p>
-                <div className="pt-8">
-                   <Link href="/contact" className="btn-premium px-10">Inquire for Pricing</Link>
+                <div className="space-y-2">
+                  <p className={`text-[10px] uppercase tracking-[0.3em] font-bold ${pkg.isDark ? "text-sestra-gold" : "text-sestra-teal/60"}`}>{pkg.investment}</p>
+                  <p className={`text-[10px] uppercase tracking-widest italic opacity-50 ${pkg.isDark ? "text-sestra-cream" : "text-foreground"}`}>{pkg.timeline}</p>
+                </div>
+                <div className={`pt-8 ${pkg.isDark ? "flex justify-center w-full" : "text-left"}`}>
+                   <Link 
+                     href="/contact" 
+                     className={`btn-premium px-12 ${pkg.isDark ? "bg-sestra-gold text-sestra-teal hover:bg-white" : ""}`}
+                   >
+                     Inquire for Partnership
+                   </Link>
                 </div>
               </div>
 
               <div className="lg:col-span-8 flex flex-col md:flex-row gap-20">
                 <div className="flex-1 space-y-8">
-                   <p className="text-base text-foreground/60 leading-relaxed font-light">
+                   <p className={`text-base leading-relaxed font-light ${pkg.isDark ? "text-sestra-cream/70" : "text-foreground/60"}`}>
                      {pkg.description}
                    </p>
                 </div>
                 <div className="flex-1 space-y-6">
-                   <span className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-bold">What's Included</span>
+                   <span className={`text-[10px] uppercase tracking-widest font-bold ${pkg.isDark ? "text-sestra-gold" : "text-sestra-teal/60"}`}>What's Included</span>
                    <ul className="space-y-4">
                       {pkg.deliverables.map((item, i) => (
-                        <li key={i} className="flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-foreground/50 pb-4 border-b border-sestra-teal/5">
+                        <li key={i} className={`flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold pb-4 border-b ${pkg.isDark ? "border-sestra-cream/10 text-sestra-cream/60" : "border-sestra-teal/5 text-foreground/50"}`}>
                            <span className="w-1 h-1 rounded-full bg-sestra-gold" />
                            {item}
                         </li>

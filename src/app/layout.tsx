@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Jost, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ 
+const jost = Jost({ 
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-jost",
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
-const playfair = Playfair_Display({ 
+const cormorant = Cormorant_Garamond({ 
   subsets: ["latin"],
-  variable: "--font-playfair",
-  weight: ["400", "500", "600", "700"], // Note: Playfair Display weights start at 400 in next/font/google usually, but I will check if it supports lower. Actually Playfair supports variable.
+  variable: "--font-cormorant",
+  weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
 });
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${jost.variable} ${cormorant.variable}`}>
       <body className="antialiased bg-background text-foreground">
         <Navbar />
         <main>{children}</main>

@@ -16,8 +16,8 @@ module.exports = {
         "sestra-pale": "#A8A882",
       },
       fontFamily: {
-        serif: ["var(--font-playfair)", "serif"],
-        sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-cormorant)", "serif"],
+        sans: ["var(--font-jost)", "sans-serif"],
       },
     },
   },

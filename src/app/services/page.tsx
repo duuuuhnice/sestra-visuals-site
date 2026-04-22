@@ -102,7 +102,7 @@ export default function Services() {
       <div className="editorial-container">
         {/* Hero Section */}
         <header className="mb-48 space-y-8">
-          <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-bold">
+          <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light">
             BESPOKE PATHWAYS FOR THE CONSCIOUS VISIONARY
           </span>
           <div className="max-w-4xl space-y-12">
@@ -123,14 +123,14 @@ export default function Services() {
               className={`grid grid-cols-1 lg:grid-cols-12 gap-20 items-start border-t border-sestra-teal/5 pt-24 ${pkg.isDark ? "bg-sestra-teal p-12 lg:p-20 text-sestra-cream border-none -mx-6 lg:-mx-20" : ""}`}
             >
               <div className="lg:col-span-4 space-y-8">
-                <span className={`text-[10px] uppercase tracking-[0.4em] font-bold ${pkg.isDark ? "text-sestra-gold/80" : "text-sestra-teal/40"}`}>{pkg.type}</span>
+                <span className={`text-[10px] uppercase tracking-[0.4em] font-light ${pkg.isDark ? "text-sestra-gold/80" : "text-sestra-teal/40"}`}>{pkg.type}</span>
                 <h2 className={`text-4xl md:text-6xl font-serif leading-tight ${pkg.isDark ? "text-sestra-cream" : "text-sestra-teal"}`}>
                   {pkg.title.split(' ').map((word, i) => (
                     <span key={i} className={i === 1 ? "serif-italic" : ""}>{word} </span>
                   ))}
                 </h2>
                 <div className="space-y-2">
-                  <p className={`text-[10px] uppercase tracking-[0.3em] font-bold ${pkg.isDark ? "text-sestra-gold" : "text-sestra-teal/60"}`}>{pkg.investment}</p>
+                  <p className={`text-[10px] uppercase tracking-[0.3em] font-light ${pkg.isDark ? "text-sestra-gold" : "text-sestra-teal/60"}`}>{pkg.investment}</p>
                   <p className={`text-[10px] uppercase tracking-widest italic opacity-50 ${pkg.isDark ? "text-sestra-cream" : "text-foreground"}`}>{pkg.timeline}</p>
                 </div>
                 <div className={`pt-8 ${pkg.isDark ? "flex justify-center w-full" : "text-left"}`}>
@@ -150,10 +150,10 @@ export default function Services() {
                    </p>
                 </div>
                 <div className="flex-1 space-y-6">
-                   <span className={`text-[10px] uppercase tracking-widest font-bold ${pkg.isDark ? "text-sestra-gold" : "text-sestra-teal/60"}`}>What's Included</span>
+                   <span className={`text-[10px] uppercase tracking-widest font-light ${pkg.isDark ? "text-sestra-gold" : "text-sestra-teal/60"}`}>What's Included</span>
                    <ul className="space-y-4">
                       {pkg.deliverables.map((item, i) => (
-                        <li key={i} className={`flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold pb-4 border-b ${pkg.isDark ? "border-sestra-cream/10 text-sestra-cream/60" : "border-sestra-teal/5 text-foreground/50"}`}>
+                        <li key={i} className={`flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-light pb-4 border-b ${pkg.isDark ? "border-sestra-cream/10 text-sestra-cream/60" : "border-sestra-teal/5 text-foreground/50"}`}>
                            <span className="w-1 h-1 rounded-full bg-sestra-gold" />
                            {item}
                         </li>
@@ -168,7 +168,7 @@ export default function Services() {
         {/* Methodology Section */}
         <section className="mt-64 pt-32 border-t border-sestra-teal/10 space-y-24">
           <header className="text-center space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">The Engagement Flow</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Engagement Flow</span>
             <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
               Our <span className="serif-italic">Methodology</span>
             </h2>
@@ -177,7 +177,7 @@ export default function Services() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {methodology.map((step) => (
               <div key={step.id} className="space-y-6 p-8 border border-sestra-teal/5 bg-white/30 hover:bg-white transition-all duration-500">
-                <span className="text-[10px] uppercase tracking-widest text-sestra-gold font-bold">{step.id}</span>
+                <span className="text-[10px] uppercase tracking-widest text-sestra-gold font-light">{step.id}</span>
                 <h3 className="text-xl text-sestra-teal font-serif">{step.title}</h3>
                 <p className="text-[10px] text-foreground/50 leading-relaxed uppercase tracking-widest">{step.desc}</p>
               </div>
@@ -188,7 +188,7 @@ export default function Services() {
         {/* FAQ Section */}
         <section className="mt-64 max-w-4xl mx-auto space-y-20 pb-32">
           <header className="text-center space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">Common Inquiries</span>
+            <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">Common Inquiries</span>
             <h2 className="text-4xl md:text-6xl text-sestra-teal font-serif italic font-light">Frequently Asked</h2>
           </header>
 
@@ -199,7 +199,7 @@ export default function Services() {
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   className="w-full py-8 flex justify-between items-center text-left hover:text-sestra-mahogany transition-colors"
                 >
-                  <span className="text-sm md:text-base uppercase tracking-widest text-sestra-teal/80 font-bold">{faq.q}</span>
+                  <span className="text-sm md:text-base uppercase tracking-widest text-sestra-teal/80 font-light">{faq.q}</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-500 ${openFaq === i ? "rotate-180" : ""}`} />
                 </button>
                 {openFaq === i && (

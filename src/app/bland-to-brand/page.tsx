@@ -32,7 +32,7 @@ export default function BlandToBrand() {
         <div className="bg-sestra-teal text-sestra-cream flex flex-col justify-center px-6 lg:px-20 py-24 lg:py-32 relative">
           <div className="max-w-xl self-end space-y-12">
             <div className="space-y-6">
-              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-gold/60 font-bold">
+              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-gold/60 font-light">
                 1:1 STRATEGY SESSION
               </span>
               <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif leading-tight">
@@ -55,7 +55,7 @@ export default function BlandToBrand() {
         <div className="bg-sestra-cream flex flex-col justify-center px-6 lg:px-20 py-24 lg:py-32">
           <div className="max-w-md space-y-12">
             <div className="space-y-4">
-               <span className="text-[9px] uppercase tracking-widest text-sestra-teal/40 font-bold">The Session Details</span>
+               <span className="text-[9px] uppercase tracking-widest text-sestra-teal/40 font-light">The Session Details</span>
                <ul className="space-y-6">
                   {[
                     { label: "Format", val: "Virtual (Global)" },
@@ -66,7 +66,7 @@ export default function BlandToBrand() {
                   ].map((item, i) => (
                     <li key={i} className="flex justify-between items-center text-[10px] uppercase tracking-wider pb-4 border-b border-sestra-teal/5">
                       <span className="text-foreground/40">{item.label}</span>
-                      <span className="text-sestra-teal font-bold">{item.val}</span>
+                      <span className="text-sestra-teal font-light">{item.val}</span>
                     </li>
                   ))}
                 </ul>
@@ -85,7 +85,7 @@ export default function BlandToBrand() {
         {/* Audience Proof Section */}
         <section className="mb-48 space-y-24">
            <header className="text-center space-y-6">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">The Ideal Fit</span>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Ideal Fit</span>
               <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
                 Built for the <br /> <span className="serif-italic">in-between</span> stage.
               </h2>
@@ -114,7 +114,7 @@ export default function BlandToBrand() {
            </div>
 
            <div className="pt-12 text-center">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-sestra-teal/30 font-bold">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-sestra-teal/30 font-light">
                 (This is not for the person looking for a quick logo fix or a vanity project.)
               </p>
            </div>
@@ -123,16 +123,16 @@ export default function BlandToBrand() {
         {/* Methodology Grid */}
         <section className="mb-48 space-y-24">
            <header className="text-center space-y-6">
-             <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">The Session Methodology</span>
+             <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Session Methodology</span>
              <h2 className="text-4xl md:text-6xl text-sestra-teal font-serif italic font-light">From Audit to Action</h2>
            </header>
 
            <div className="grid grid-cols-1 md:grid-cols-4 gap-1px bg-sestra-teal/5 border border-sestra-teal/5">
               {methodology.map((step, i) => (
                 <div key={i} className="bg-sestra-cream p-12 space-y-6 hover:bg-white transition-all duration-500">
-                  <span className="text-[10px] uppercase tracking-widest text-sestra-gold font-bold">{step.id}</span>
+                  <span className="text-[10px] uppercase tracking-widest text-sestra-gold font-light">{step.id}</span>
                   <h4 className="text-lg text-sestra-teal font-serif">{step.title}</h4>
-                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 leading-relaxed font-bold">{step.desc}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 leading-relaxed font-light">{step.desc}</p>
                 </div>
               ))}
            </div>
@@ -151,7 +151,7 @@ export default function BlandToBrand() {
            
            <div className="lg:col-span-7 space-y-12">
               <div className="space-y-6">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold italic">After your session</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light italic">After your session</span>
                 <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
                    Direction over <br /> a <span className="serif-italic">pep talk.</span>
                 </h2>
@@ -159,7 +159,7 @@ export default function BlandToBrand() {
               
               <ul className="space-y-4">
                  {deliverables.map((item, i) => (
-                   <li key={i} className="flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-bold text-foreground/50 pb-4 border-b border-sestra-teal/5">
+                   <li key={i} className="flex items-center gap-4 text-[10px] uppercase tracking-[0.2em] font-light text-foreground/50 pb-4 border-b border-sestra-teal/5">
                       <span className="w-1.5 h-1.5 rounded-full bg-sestra-gold" />
                       {item}
                    </li>
@@ -177,7 +177,7 @@ export default function BlandToBrand() {
              <div className="flex justify-center">
                 <div className="px-5 py-2 bg-sestra-sand/20 rounded-full border border-sestra-teal/5 inline-flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-[#34D399] animate-pulse" />
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-sestra-teal/60">● Slots Open for Q3 2025</span>
+                  <span className="text-[10px] uppercase tracking-widest font-light text-sestra-teal/60">● Slots Open for Q3 2025</span>
                 </div>
              </div>
            </div>
@@ -185,7 +185,7 @@ export default function BlandToBrand() {
            <div className="pt-8">
               <Link href="/contact" className="btn-premium px-16">Book Your Session</Link>
            </div>
-           <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-bold italic">Currently booking select 1:1 sessions.</p>
+           <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-light italic">Currently booking select 1:1 sessions.</p>
         </section>
 
       </div>

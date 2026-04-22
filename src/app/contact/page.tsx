@@ -12,11 +12,11 @@ export default function Contact() {
               
               <div className="pt-12 space-y-8">
                 <div>
-                  <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-sestra-teal/30 mb-4">Current Availability</h3>
+                  <h3 className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/30 mb-4">Current Availability</h3>
                   <p className="text-sm italic">2 spots remaining for Q3 2025</p>
                 </div>
                 <div>
-                  <h3 className="text-[10px] uppercase tracking-[0.3em] font-bold text-sestra-teal/30 mb-4">Social</h3>
+                  <h3 className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/30 mb-4">Social</h3>
                   <div className="flex gap-8 text-xs tracking-widest uppercase">
                     <a href="#" className="hover:text-sestra-gold">Instagram</a>
                     <a href="#" className="hover:text-sestra-gold">Pinterest</a>
@@ -28,12 +28,12 @@ export default function Contact() {
             <div className="bg-sestra-sand/20 p-10 md:p-16 border border-sestra-sand">
               <form className="space-y-10">
                 <div className="space-y-4">
-                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-bold block">The Basics</label>
+                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-light block">The Basics</label>
                   <input type="text" placeholder="Full Name" className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm focus:outline-none focus:border-sestra-teal transition-all" />
                   <input type="email" placeholder="Email Address" className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm focus:outline-none focus:border-sestra-teal transition-all" />
                 </div>
 
-                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-bold block">Where are you in your brand journey?</label>
+                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-light block">Where are you in your brand journey?</label>
                   <div className="space-y-4 pt-2">
                     {[
                       "Just starting out — I need a brand from scratch",
@@ -50,7 +50,7 @@ export default function Contact() {
                     ))}
                   </div>
 
-                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-bold block pt-6">Tell us about your brand soul</label>
+                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-light block pt-6">Tell us about your brand soul</label>
                   <textarea rows={4} placeholder="Who are you, who do you serve, what do you believe in — share as much or as little as you'd like here..." className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm focus:outline-none focus:border-sestra-teal transition-all resize-none" />
 
                 <button type="submit" className="w-full btn-premium">Submit Inquiry</button>

@@ -71,7 +71,7 @@ export default function Portfolio() {
         {/* Hero Section */}
         <header className="mb-32 space-y-12">
           <div className="space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-bold">
+            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light">
               A CURATED COLLECTION OF VISUAL NARRATIVES
             </span>
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-12">
@@ -86,7 +86,7 @@ export default function Portfolio() {
 
           {/* Filtering */}
           <div className="pt-12 border-t border-sestra-teal/5">
-            <div className="flex gap-12 text-[10px] uppercase tracking-[0.4em] font-bold">
+            <div className="flex gap-12 text-[10px] uppercase tracking-[0.4em] font-light">
               {filters.map((filter) => (
                 <button
                   key={filter}
@@ -128,7 +128,7 @@ export default function Portfolio() {
                     <div className="absolute inset-0 bg-sestra-teal/0 group-hover:bg-sestra-teal/10 transition-all duration-700 z-10" />
                     {project.isFeatured && (
                        <div className="absolute top-8 left-8 z-20">
-                          <span className="px-4 py-2 bg-white/90 backdrop-blur-md text-[9px] uppercase tracking-widest font-bold text-sestra-teal">Featured Project</span>
+                          <span className="px-4 py-2 bg-white/90 backdrop-blur-md text-[9px] uppercase tracking-widest font-light text-sestra-teal">Featured Project</span>
                        </div>
                     )}
                     <div className="absolute top-8 right-8 z-20">
@@ -136,7 +136,7 @@ export default function Portfolio() {
                     </div>
                     {/* Project Mood Image (Simplified for clone) */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-20">
-                       <span className="text-xs uppercase tracking-[0.4em] text-sestra-teal/60 font-bold border-b border-sestra-teal/20 pb-2">View Project</span>
+                       <span className="text-xs uppercase tracking-[0.4em] text-sestra-teal/60 font-light border-b border-sestra-teal/20 pb-2">View Project</span>
                     </div>
                   </div>
 
@@ -145,7 +145,7 @@ export default function Portfolio() {
                       <h2 className="text-3xl md:text-5xl text-sestra-teal font-serif group-hover:text-sestra-mahogany transition-colors duration-500">
                         {project.title}
                       </h2>
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-bold">
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-light">
                         {project.category}
                       </p>
                     </div>

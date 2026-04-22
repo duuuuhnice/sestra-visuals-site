@@ -7,11 +7,14 @@ import Footer from "@/components/layout/Footer";
 const inter = Inter({ 
   subsets: ["latin"],
   variable: "--font-inter",
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
 const playfair = Playfair_Display({ 
   subsets: ["latin"],
   variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"], // Note: Playfair Display weights start at 400 in next/font/google usually, but I will check if it supports lower. Actually Playfair supports variable.
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {

@@ -36,7 +36,7 @@ export default function Home() {
               className="flex items-center gap-4"
             >
               <div className="w-8 h-[1px] bg-sestra-teal/30" />
-              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/60 font-bold">
+              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/60 font-light">
                 ESTD. 2020 · Conscious Brand Studio
               </span>
               <div className="w-8 h-[1px] bg-sestra-teal/30" />
@@ -93,7 +93,7 @@ export default function Home() {
         <motion.div 
           animate={{ x: [0, -1000] }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="flex whitespace-nowrap gap-12 text-sestra-cream/90 text-xs uppercase tracking-[0.3em] font-bold items-center"
+          className="flex whitespace-nowrap gap-12 text-sestra-cream/90 text-xs uppercase tracking-[0.3em] font-light items-center"
         >
           {[...Array(10)].map((_, i) => (
             <div key={i} className="flex gap-12">
@@ -120,14 +120,14 @@ export default function Home() {
                />
                <div className="absolute top-4 left-4 lg:-left-4 lg:top-12 z-20">
                   <div className="bg-white/90 backdrop-blur-md p-6 shadow-2xl border border-sestra-teal/5">
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-sestra-teal">About Sestra</span>
+                    <span className="text-[10px] uppercase tracking-widest font-light text-sestra-teal">About Sestra</span>
                   </div>
                </div>
             </div>
             
             <div className="lg:col-span-6 space-y-12">
               <div className="space-y-6">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">The Philosophy</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Philosophy</span>
                 <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
                   Brands built from <br /> the <span className="serif-italic">inside out.</span>
                 </h2>
@@ -135,7 +135,7 @@ export default function Home() {
               
               <div className="space-y-8 max-w-xl">
                 <p className="text-xl font-serif italic text-foreground/70 leading-relaxed font-light">
-                  "People will forget what you said, people will forget what you did, but people will never forget <span className="text-sestra-mahogany font-medium">how you made them feel.</span>"
+                  "People will forget what you said, people will forget what you did, but people will never forget <span className="text-sestra-mahogany font-light border-b border-sestra-mahogany/20">how you made them feel.</span>"
                 </p>
                 <div className="w-12 h-[1px] bg-sestra-gold/50" />
                 <p className="text-base text-foreground/60 leading-relaxed">
@@ -162,7 +162,7 @@ export default function Home() {
             ].map((stat, i) => (
               <div key={i} className="text-center space-y-3 lg:px-12">
                 <p className="text-4xl md:text-6xl text-sestra-teal font-serif">{stat.val}</p>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-bold">{stat.label}</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-light">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -174,7 +174,7 @@ export default function Home() {
         <div className="editorial-container">
           <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
             <div className="space-y-6">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold italic">Featured Selection</span>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light italic">Featured Selection</span>
               <h2 className="text-5xl md:text-8xl text-sestra-teal font-serif">Featured <span className="serif-italic">Work</span></h2>
             </div>
             <Link href="/portfolio" className="text-xs uppercase tracking-[0.3em] border-b border-sestra-teal/20 pb-2 hover:border-sestra-teal transition-all">
@@ -204,7 +204,7 @@ export default function Home() {
                 <div className="flex justify-between items-end pb-8 border-b border-sestra-teal/5">
                   <div className="space-y-2">
                     <h3 className="text-3xl text-sestra-teal font-serif">{project.title}</h3>
-                    <p className="text-[9px] uppercase tracking-widest text-foreground/40 font-bold">{project.category}</p>
+                    <p className="text-[9px] uppercase tracking-widest text-foreground/40 font-light">{project.category}</p>
                   </div>
                   <span className="text-[10px] uppercase tracking-widest text-foreground/30">© 2025</span>
                 </div>
@@ -219,7 +219,7 @@ export default function Home() {
         <div className="editorial-container">
           <div className="max-w-6xl mx-auto space-y-32">
             <header className="text-center space-y-8">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">The Methodology</span>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Methodology</span>
               <h2 className="text-5xl md:text-8xl text-sestra-teal font-serif">
                 The Sestra <span className="serif-italic">Approach</span>
               </h2>
@@ -276,7 +276,7 @@ export default function Home() {
             Working with Sestra felt less like a design project and more like a <span className="text-sestra-gold">homecoming.</span> I finally had a brand that looked like the version of me I’d always been building.
           </motion.h3>
           <div className="space-y-2">
-            <p className="text-xs uppercase tracking-[0.4em] font-bold">Sarah M.</p>
+            <p className="text-xs uppercase tracking-[0.4em] font-light">Sarah M.</p>
             <p className="text-[10px] uppercase tracking-widest text-sestra-gold/60">Lumina Wellness</p>
           </div>
         </div>
@@ -293,7 +293,7 @@ export default function Home() {
               <div className="flex justify-center">
                  <div className="px-5 py-2 bg-sestra-sand/20 rounded-full border border-sestra-teal/5 inline-flex items-center gap-3">
                    <div className="w-2 h-2 rounded-full bg-[#34D399] animate-pulse" />
-                   <span className="text-[10px] uppercase tracking-widest font-bold text-sestra-teal/60">2 Spots Remaining — Q3 2025</span>
+                   <span className="text-[10px] uppercase tracking-widest font-light text-sestra-teal/60">2 Spots Remaining — Q3 2025</span>
                  </div>
               </div>
             </div>

@@ -12,7 +12,7 @@ export default function About() {
           {/* Header Section */}
           <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 border-b border-sestra-teal/5 pb-24">
             <div className="lg:col-span-4 space-y-4">
-              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/40 font-bold">The Sestra Narrative</span>
+              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/40 font-light">The Sestra Narrative</span>
             </div>
             
             <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -22,7 +22,7 @@ export default function About() {
               
               <div className="space-y-10 self-end">
                 <div className="space-y-4">
-                  <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-sestra-teal/40 italic">Rooted in Intent · Elevated by Design</p>
+                  <p className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/40 italic">Rooted in Intent · Elevated by Design</p>
                   <p className="text-lg md:text-xl font-serif italic text-foreground/70 leading-relaxed border-l border-sestra-gold/30 pl-8">
                     "My work is not just about aesthetics — it's about the resonance between a brand and its audience."
                   </p>
@@ -49,7 +49,7 @@ export default function About() {
 
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-6">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/40 font-bold">Hi, I'm Denice.</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/40 font-light">Hi, I'm Denice.</span>
                 <h2 className="text-4xl md:text-6xl text-sestra-teal font-serif leading-[1.1]">
                   Soulful Strategist. <br />
                   <span className="italic font-light text-sestra-mahogany/80">Empathetic Consultant.</span>
@@ -104,7 +104,7 @@ export default function About() {
                   }
                 ].map((item) => (
                   <div key={item.num} className="bg-sestra-cream p-10 space-y-6">
-                    <span className="text-[10px] uppercase tracking-widest text-sestra-teal/30 font-bold">{item.num}</span>
+                    <span className="text-[10px] uppercase tracking-widest text-sestra-teal/30 font-light">{item.num}</span>
                     <h3 className="text-xl text-sestra-teal font-serif">{item.title}</h3>
                     <p className="text-sm text-foreground/50 leading-relaxed font-light">{item.desc}</p>
                   </div>

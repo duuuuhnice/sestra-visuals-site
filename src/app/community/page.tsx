@@ -40,7 +40,7 @@ export default function Community() {
         {/* Hero Section */}
         <header className="mb-48 space-y-12">
           <div className="space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-bold">
+            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light">
               A CURATED SPACE FOR CONSCIOUS BUILDERS
             </span>
             <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-12">
@@ -54,7 +54,7 @@ export default function Community() {
           </div>
           
           <div className="pt-8 border-t border-sestra-teal/5">
-             <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-sestra-teal/40">
+             <p className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/40">
                — MEMBERS STRONG | 6+ YEARS OF PRACTICE | 1 INTENTIONAL SPACE
              </p>
           </div>
@@ -73,7 +73,7 @@ export default function Community() {
            
            <div className="lg:col-span-7 space-y-12">
               <div className="space-y-6">
-                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold">The Collective Philosophy</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Collective Philosophy</span>
                 <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
                   Not just a community. <br /> A <span className="serif-italic">collective.</span>
                 </h2>
@@ -97,7 +97,7 @@ export default function Community() {
               {pillars.map((pillar, i) => (
                 <div key={i} className="space-y-4 lg:px-12 text-center md:text-left">
                   <h3 className="text-xl text-sestra-teal font-serif lowercase italic">{pillar.title}</h3>
-                  <p className="text-[10px] uppercase tracking-widest text-foreground/50 leading-relaxed font-bold">{pillar.desc}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/50 leading-relaxed font-light">{pillar.desc}</p>
                 </div>
               ))}
            </div>
@@ -106,7 +106,7 @@ export default function Community() {
         {/* The Community Vault */}
         <section className="mb-64 space-y-24">
            <header className="text-center space-y-6">
-             <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-bold italic">The Membership Benefits</span>
+             <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light italic">The Membership Benefits</span>
              <h2 className="text-5xl md:text-8xl text-sestra-teal font-serif">The Community <span className="serif-italic">Vault</span></h2>
            </header>
 
@@ -114,7 +114,7 @@ export default function Community() {
               {vaultItems.map((item, i) => (
                 <div key={i} className="bg-sestra-cream p-12 space-y-4 hover:bg-white transition-all duration-500">
                   <h4 className="text-lg text-sestra-teal font-serif">{item.title}</h4>
-                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 leading-relaxed font-bold">{item.desc}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40 leading-relaxed font-light">{item.desc}</p>
                 </div>
               ))}
            </div>
@@ -127,8 +127,8 @@ export default function Community() {
               Being part of Swan Elite isn’t just about the resources — it’s about the <span className="text-sestra-mahogany">unspoken permission</span> to build at a pace that honors your soul.
             </p>
             <div className="space-y-1">
-               <p className="text-[10px] uppercase tracking-[0.4em] font-bold">Brand Consultant</p>
-               <p className="text-[9px] uppercase tracking-widest text-sestra-gold font-bold italic">Member since 2023</p>
+               <p className="text-[10px] uppercase tracking-[0.4em] font-light">Brand Consultant</p>
+               <p className="text-[9px] uppercase tracking-widest text-sestra-gold font-light italic">Member since 2023</p>
             </div>
         </section>
 
@@ -140,7 +140,7 @@ export default function Community() {
            <div className="pt-8">
               <a href="#" className="btn-premium px-16">Join the Community</a>
            </div>
-           <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-bold">Doors currently open for select intake.</p>
+           <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-light">Doors currently open for select intake.</p>
         </section>
 
       </div>

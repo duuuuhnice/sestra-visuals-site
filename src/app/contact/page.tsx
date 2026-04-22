@@ -1,59 +1,78 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Contact() {
   return (
-    <div className="pt-40 pb-32">
+    <div className="bg-sestra-cream min-h-screen pt-40 lg:pt-48 pb-32">
       <div className="editorial-container">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-32">
+            
+            {/* Left Column: Context */}
             <div className="space-y-12">
-              <h1 className="text-5xl md:text-8xl text-sestra-teal leading-tight">Begin Your <br /> Narrative</h1>
-              <p className="text-base text-foreground/50 leading-relaxed max-w-sm">
-                We are currently accepting inquiries for select partnerships. Fill out the form and Denice will personally review your submission and be in touch within 2 business days.
+              <div className="space-y-6">
+                <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light italic">Connect with Sestra</span>
+                <h1 className="text-6xl md:text-8xl lg:text-9xl text-sestra-teal font-serif leading-[0.95] tracking-[-0.02em]">
+                  Begin Your <br /> <span className="serif-italic">Narrative.</span>
+                </h1>
+              </div>
+              
+              <p className="text-xl text-foreground/50 leading-relaxed max-w-sm font-light italic border-l border-sestra-gold/30 pl-8">
+                We are currently accepting inquiries for select partnerships. Every submission is personally reviewed.
               </p>
               
-              <div className="pt-12 space-y-8">
-                <div>
-                  <h3 className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/30 mb-4">Current Availability</h3>
-                  <p className="text-sm italic">2 spots remaining for Q3 2025</p>
+              <div className="pt-12 space-y-12">
+                <div className="space-y-4">
+                  <h3 className="text-[10px] uppercase tracking-[0.4em] font-light text-sestra-teal/30">Current Availability</h3>
+                  <p className="text-base italic text-sestra-teal/60">2 spots remaining for Q3 2025</p>
                 </div>
-                <div>
-                  <h3 className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/30 mb-4">Social</h3>
-                  <div className="flex gap-8 text-xs tracking-widest uppercase">
-                    <a href="#" className="hover:text-sestra-gold">Instagram</a>
-                    <a href="#" className="hover:text-sestra-gold">Pinterest</a>
+                <div className="space-y-4">
+                  <h3 className="text-[10px] uppercase tracking-[0.4em] font-light text-sestra-teal/30">Social Hub</h3>
+                  <div className="flex gap-8 text-[10px] tracking-[0.3em] uppercase font-light">
+                    <a href="#" className="hover:text-sestra-gold transition-colors">Instagram</a>
+                    <a href="#" className="hover:text-sestra-gold transition-colors">Pinterest</a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-sestra-sand/20 p-10 md:p-16 border border-sestra-sand">
-              <form className="space-y-10">
-                <div className="space-y-4">
-                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-light block">The Basics</label>
-                  <input type="text" placeholder="Full Name" className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm focus:outline-none focus:border-sestra-teal transition-all" />
-                  <input type="email" placeholder="Email Address" className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm focus:outline-none focus:border-sestra-teal transition-all" />
+            {/* Right Column: Inquiry Form */}
+            <div className="bg-white/40 backdrop-blur-sm p-10 md:p-16 border border-sestra-teal/5 shadow-2xl">
+              <form className="space-y-12">
+                <div className="space-y-8">
+                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/40 font-light block">The Basics</label>
+                  <div className="space-y-6">
+                    <input type="text" placeholder="Full Name" className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm font-light focus:outline-none focus:border-sestra-teal transition-all" />
+                    <input type="email" placeholder="Email Address" className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm font-light focus:outline-none focus:border-sestra-teal transition-all" />
+                  </div>
                 </div>
 
-                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-light block">Where are you in your brand journey?</label>
+                <div className="space-y-6">
+                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/40 font-light block">Your Brand Journey</label>
                   <div className="space-y-4 pt-2">
                     {[
-                      "Just starting out — I need a brand from scratch",
-                      "I have a brand but it needs to evolve",
-                      "I’m rebuilding — my current brand no longer reflects me",
-                      "I’m scaling and need strategic brand support"
+                      "Starting from scratch",
+                      "Evolving an existing brand",
+                      "Rebuilding & Rebranding",
+                      "Scaling Strategic Support"
                     ].map((option) => (
-                      <label key={option} className="flex items-center gap-3 cursor-pointer group">
-                        <div className="w-4 h-4 rounded-full border border-sestra-teal/20 group-hover:border-sestra-teal transition-colors flex items-center justify-center">
-                          <div className="w-1.5 h-1.5 rounded-full bg-sestra-teal opacity-0 group-hover:opacity-40 transition-opacity" />
+                      <label key={option} className="flex items-center gap-4 cursor-pointer group">
+                        <div className="w-3 h-3 rounded-full border border-sestra-teal/20 group-hover:border-sestra-teal transition-colors flex items-center justify-center">
+                          <div className="w-1 h-1 rounded-full bg-sestra-teal opacity-0 group-hover:opacity-40 transition-opacity" />
                         </div>
-                        <span className="text-xs text-foreground/50 group-hover:text-foreground/80 transition-colors uppercase tracking-wider">{option}</span>
+                        <span className="text-[10px] text-foreground/40 group-hover:text-foreground/80 transition-colors uppercase tracking-[0.2em] font-light">{option}</span>
                       </label>
                     ))}
                   </div>
+                </div>
 
-                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/60 font-light block pt-6">Tell us about your brand soul</label>
-                  <textarea rows={4} placeholder="Who are you, who do you serve, what do you believe in — share as much or as little as you'd like here..." className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm focus:outline-none focus:border-sestra-teal transition-all resize-none" />
+                <div className="space-y-6">
+                  <label className="text-[10px] uppercase tracking-widest text-sestra-teal/40 font-light block">Brand Soul</label>
+                  <textarea rows={4} placeholder="Tell us about your heart & vision..." className="w-full bg-transparent border-b border-sestra-teal/10 pb-4 text-sm font-light focus:outline-none focus:border-sestra-teal transition-all resize-none" />
+                </div>
 
-                <button type="submit" className="w-full btn-premium">Submit Inquiry</button>
+                <button type="submit" className="w-full btn-premium py-6">Submit Inquiry</button>
               </form>
             </div>
           </div>

@@ -21,11 +21,11 @@ body {
 
 @layer base {
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-light tracking-wide;
+    @apply font-serif font-light tracking-[-0.025em] leading-[0.95];
   }
   
   p {
-    @apply font-sans font-light leading-relaxed text-opacity-80 tracking-wide;
+    @apply font-sans font-light leading-relaxed text-opacity-80 tracking-normal;
   }
 }
 
@@ -38,15 +38,19 @@ body {
 }
 
 .nav-link {
-  @apply text-sm uppercase tracking-widest hover:text-sestra-gold transition-colors duration-300;
+  @apply text-[10px] uppercase tracking-[0.3em] font-light hover:text-sestra-gold transition-colors duration-300;
 }
 
 .btn-premium {
-  @apply px-8 py-3 bg-sestra-teal text-sestra-cream text-sm uppercase tracking-widest hover:bg-sestra-mahogany transition-all duration-500 rounded-full;
+  @apply px-10 py-4 bg-sestra-teal text-sestra-cream text-[10px] uppercase tracking-[0.3em] font-light hover:bg-sestra-mahogany transition-all duration-500 rounded-full inline-block;
 }
 
 @layer utilities {
   .serif-italic {
     @apply font-serif italic text-sestra-mahogany font-light;
+  }
+  
+  .section-padding {
+    @apply py-24 md:py-32;
   }
 }

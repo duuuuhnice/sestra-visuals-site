@@ -11,7 +11,7 @@ const pillars = [
   },
   { 
     title: "Community Connection", 
-    desc: "Access a private network of high-frequency founders who are building with depth and intention." 
+    Access: "Access a private network of high-frequency founders who are building with depth and intention." 
   },
   { 
     title: "Digital Resources", 
@@ -34,35 +34,63 @@ const vaultItems = [
 
 export default function Community() {
   return (
-    <div className="pt-48 pb-32 bg-sestra-cream min-h-screen">
-      <div className="editorial-container">
+    <div className="bg-sestra-cream min-h-screen">
+      
+      {/* Precision Split Hero Section */}
+      <section className="relative min-h-[85vh] grid grid-cols-1 lg:grid-cols-2 border-b border-sestra-teal/5">
         
-        {/* Hero Section */}
-        <header className="mb-48 space-y-12">
-          <div className="space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light">
-              A CURATED SPACE FOR CONSCIOUS BUILDERS
-            </span>
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-12">
-               <h1 className="text-6xl md:text-9xl text-sestra-teal font-serif">
-                 Swan Elite<span className="serif-italic">.</span>
-               </h1>
-               <p className="text-lg text-foreground/60 max-w-xl leading-relaxed font-light italic">
+        {/* Left Column: Narrative */}
+        <div className="flex flex-col justify-center px-6 md:px-12 lg:px-20 pt-40 pb-24 border-r border-sestra-teal/5">
+          <div className="space-y-12">
+            <div className="space-y-6">
+              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light">
+                A CURATED SPACE FOR CONSCIOUS BUILDERS
+              </span>
+              <h1 className="text-6xl md:text-8xl lg:text-[100px] text-sestra-teal font-serif leading-[0.95] tracking-[-0.02em]">
+                Swan Elite<span className="serif-italic">.</span>
+              </h1>
+            </div>
+            
+            <div className="space-y-8 max-w-sm">
+               <p className="text-lg text-foreground/60 leading-relaxed font-light italic border-l border-sestra-gold/30 pl-8">
                  Where ambitious women build brands with depth, intention, and a community that actually gets it.
                </p>
+               <div className="pt-4">
+                 <Link href="#" className="btn-premium px-12">Join the Community</Link>
+               </div>
             </div>
           </div>
-          
-          <div className="pt-8 border-t border-sestra-teal/5">
-             <p className="text-[10px] uppercase tracking-[0.3em] font-light text-sestra-teal/40">
-               — MEMBERS STRONG | 6+ YEARS OF PRACTICE | 1 INTENTIONAL SPACE
-             </p>
-          </div>
-        </header>
+        </div>
 
+        {/* Right Column: Statistics */}
+        <div className="flex flex-col justify-center bg-sestra-teal text-sestra-cream px-6 md:px-12 lg:px-20 pt-20 lg:pt-40 pb-20">
+           <div className="space-y-16">
+              <div className="text-center lg:text-left space-y-2">
+                 <p className="text-[10px] uppercase tracking-[0.4em] text-sestra-gold font-light">— THE COLLECTIVE METRICS</p>
+              </div>
+
+              <div className="grid grid-cols-1 gap-12">
+                {[
+                  { val: "100+", label: "Members Strong" },
+                  { val: "6+", label: "Years of Practice" },
+                  { val: "1", label: "Intentional Space" }
+                ].map((stat, i) => (
+                  <div key={i} className="flex items-center gap-8 border-b border-white/5 pb-8">
+                    <p className="text-4xl md:text-6xl font-serif text-sestra-gold">{stat.val}</p>
+                    <p className="text-[10px] uppercase tracking-[0.3em] font-light text-white/40">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+           </div>
+        </div>
+      </section>
+
+      {/* Main Page Content */}
+      <div className="editorial-container space-y-48 py-32">
+        
         {/* Philosophy Section */}
-        <section className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-20 items-center">
-           <div className="lg:col-span-5 relative aspect-square bg-sestra-sand overflow-hidden">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+           <div className="relative aspect-square bg-sestra-teal/5 overflow-hidden">
               <Image 
                 src="/images/community-founders.png" 
                 alt="Swan Elite Community"
@@ -71,17 +99,17 @@ export default function Community() {
               />
            </div>
            
-           <div className="lg:col-span-7 space-y-12">
+           <div className="space-y-12">
               <div className="space-y-6">
                 <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light">The Collective Philosophy</span>
-                <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
+                <h2 className="text-5xl md:text-8xl text-sestra-teal font-serif">
                   Not just a community. <br /> A <span className="serif-italic">collective.</span>
                 </h2>
               </div>
               
               <div className="space-y-8 max-w-xl">
                  <p className="text-xl font-serif italic text-foreground/70 leading-relaxed font-light">
-                   Swan Elite was birthed for the woman who builds quietly, deeply, and with an unwavering commitment to her <span className="text-sestra-mahogany font-medium">brand’s truest frequency.</span>
+                   Swan Elite was birthed for the woman who builds quietly, deeply, and with an unwavering commitment to her <span className="text-sestra-mahogany font-light">brand’s truest frequency.</span>
                  </p>
                  <div className="w-12 h-[1px] bg-sestra-gold/50" />
                  <p className="text-base text-foreground/60 leading-relaxed">
@@ -91,20 +119,8 @@ export default function Community() {
            </div>
         </section>
 
-        {/* Pillars Grid */}
-        <section className="mb-48 py-24 border-y border-sestra-teal/5">
-           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 lg:divide-x lg:divide-sestra-teal/10">
-              {pillars.map((pillar, i) => (
-                <div key={i} className="space-y-4 lg:px-12 text-center md:text-left">
-                  <h3 className="text-xl text-sestra-teal font-serif lowercase italic">{pillar.title}</h3>
-                  <p className="text-[10px] uppercase tracking-widest text-foreground/50 leading-relaxed font-light">{pillar.desc}</p>
-                </div>
-              ))}
-           </div>
-        </section>
-
         {/* The Community Vault */}
-        <section className="mb-64 space-y-24">
+        <section className="space-y-24">
            <header className="text-center space-y-6">
              <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/30 font-light italic">The Membership Benefits</span>
              <h2 className="text-5xl md:text-8xl text-sestra-teal font-serif">The Community <span className="serif-italic">Vault</span></h2>
@@ -112,30 +128,18 @@ export default function Community() {
 
            <div className="grid grid-cols-1 md:grid-cols-3 gap-1px bg-sestra-teal/5 border border-sestra-teal/5">
               {vaultItems.map((item, i) => (
-                <div key={i} className="bg-sestra-cream p-12 space-y-4 hover:bg-white transition-all duration-500">
-                  <h4 className="text-lg text-sestra-teal font-serif">{item.title}</h4>
+                <div key={i} className="bg-sestra-cream p-12 space-y-6 hover:bg-white transition-all duration-500">
+                  <h4 className="text-2xl text-sestra-teal font-serif lowercase italic">{item.title}</h4>
                   <p className="text-[10px] uppercase tracking-widest text-foreground/40 leading-relaxed font-light">{item.desc}</p>
                 </div>
               ))}
            </div>
         </section>
 
-        {/* Testimonial Section */}
-        <section className="mb-48 max-w-4xl mx-auto text-center space-y-12">
-            <span className="text-6xl font-serif text-sestra-gold/30 italic">“</span>
-            <p className="text-2xl md:text-4xl text-sestra-teal font-serif leading-relaxed italic font-light">
-              Being part of Swan Elite isn’t just about the resources — it’s about the <span className="text-sestra-mahogany">unspoken permission</span> to build at a pace that honors your soul.
-            </p>
-            <div className="space-y-1">
-               <p className="text-[10px] uppercase tracking-[0.4em] font-light">Brand Consultant</p>
-               <p className="text-[9px] uppercase tracking-widest text-sestra-gold font-light italic">Member since 2023</p>
-            </div>
-        </section>
-
         {/* Final CTA */}
         <section className="text-center space-y-16 py-32 border-t border-sestra-teal/5">
-           <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
-             Ready to build among <br className="hidden md:block" /> your <span className="serif-italic">people?</span>
+           <h2 className="text-4xl md:text-8xl text-sestra-teal font-serif">
+             Ready to build among <br /> your <span className="serif-italic">people?</span>
            </h2>
            <div className="pt-8">
               <a href="#" className="btn-premium px-16">Join the Community</a>

@@ -66,48 +66,54 @@ export default function Portfolio() {
     : projects.filter(p => p.filter === activeFilter);
 
   return (
-    <div className="pt-48 pb-32 bg-sestra-cream min-h-screen">
-      <div className="editorial-container">
-        {/* Hero Section */}
-        <header className="mb-32 space-y-12">
-          <div className="space-y-6">
-            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-light">
-              A CURATED COLLECTION OF VISUAL NARRATIVES
-            </span>
-            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-12">
-              <h1 className="text-6xl md:text-9xl text-sestra-teal font-serif">
-                Work<span className="serif-italic">.</span>
-              </h1>
-              <p className="text-lg text-foreground/60 max-w-xl leading-relaxed font-light italic">
-                Each project here is a story of transformation — of a brand finding its truest, most resonant form. Browse by type or explore the full collection below.
-              </p>
+    <div className="bg-sestra-cream min-h-screen">
+      
+      {/* Precision Split Hero Section */}
+      <section className="pt-40 lg:pt-48 pb-24 border-b border-sestra-teal/5">
+        <div className="editorial-container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-end">
+            <div className="space-y-12">
+               <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/40 font-light">
+                 A CURATED COLLECTION OF VISUAL NARRATIVES
+               </span>
+               <h1 className="text-6xl md:text-8xl lg:text-9xl text-sestra-teal font-serif leading-[0.95] tracking-[-0.02em]">
+                 Work<span className="serif-italic">.</span>
+               </h1>
+            </div>
+            
+            <div className="space-y-12 pb-4">
+               <p className="text-xl md:text-2xl font-serif italic text-foreground/60 leading-relaxed font-light border-l border-sestra-gold/30 pl-8">
+                 Each project here is a story of transformation — of a brand finding its truest, most resonant form.
+               </p>
+               
+               {/* Filtering - Integrated into split layout */}
+               <div className="pt-4">
+                 <div className="flex flex-wrap gap-8 text-[10px] uppercase tracking-[0.4em] font-light">
+                   {filters.map((filter) => (
+                     <button
+                       key={filter}
+                       onClick={() => setActiveFilter(filter)}
+                       className={`transition-all duration-500 relative pb-4 ${
+                         activeFilter === filter ? "text-sestra-teal" : "text-sestra-teal/30 hover:text-sestra-teal/60"
+                       }`}
+                     >
+                       {filter}
+                       {activeFilter === filter && (
+                         <motion.div 
+                           layoutId="activeFilter"
+                           className="absolute bottom-0 left-0 w-full h-[1px] bg-sestra-teal" 
+                         />
+                       )}
+                     </button>
+                   ))}
+                 </div>
+               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Filtering */}
-          <div className="pt-12 border-t border-sestra-teal/5">
-            <div className="flex gap-12 text-[10px] uppercase tracking-[0.4em] font-light">
-              {filters.map((filter) => (
-                <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
-                  className={`transition-all duration-500 relative pb-4 ${
-                    activeFilter === filter ? "text-sestra-teal" : "text-sestra-teal/30 hover:text-sestra-teal/60"
-                  }`}
-                >
-                  {filter}
-                  {activeFilter === filter && (
-                    <motion.div 
-                      layoutId="activeFilter"
-                      className="absolute bottom-0 left-0 w-full h-[1px] bg-sestra-teal" 
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        </header>
-
+      <div className="editorial-container section-padding">
         {/* Project Grid */}
         <div className="space-y-32">
           <AnimatePresence mode="wait">
@@ -134,15 +140,15 @@ export default function Portfolio() {
                     <div className="absolute top-8 right-8 z-20">
                        <span className="text-[10px] text-sestra-teal/40 font-serif italic">Nº {project.id}</span>
                     </div>
-                    {/* Project Mood Image (Simplified for clone) */}
+                    {/* View Button */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-20">
-                       <span className="text-xs uppercase tracking-[0.4em] text-sestra-teal/60 font-light border-b border-sestra-teal/20 pb-2">View Project</span>
+                       <span className="text-[10px] uppercase tracking-[0.4em] text-sestra-teal/60 font-light border-b border-sestra-teal/20 pb-2">View Project</span>
                     </div>
                   </div>
 
                   <div className="flex justify-between items-start pb-8 border-b border-sestra-teal/5">
                     <div className="space-y-4">
-                      <h2 className="text-3xl md:text-5xl text-sestra-teal font-serif group-hover:text-sestra-mahogany transition-colors duration-500">
+                      <h2 className="text-3xl md:text-5xl text-sestra-teal font-serif group-hover:text-sestra-mahogany transition-colors duration-500 lowercase italic">
                         {project.title}
                       </h2>
                       <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-light">
@@ -159,8 +165,8 @@ export default function Portfolio() {
 
         {/* Footer CTA */}
         <section className="mt-48 pt-32 border-t border-sestra-teal/5 text-center space-y-16">
-          <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
-            Ready to see your name <br className="hidden md:block" /> in this <span className="serif-italic">collection?</span>
+          <h2 className="text-4xl md:text-8xl text-sestra-teal font-serif leading-[0.95]">
+            Ready to see your <br /> name in this <span className="serif-italic">collection?</span>
           </h2>
           <div className="pt-8">
             <Link href="/contact" className="btn-premium px-16">

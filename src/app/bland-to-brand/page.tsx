@@ -23,29 +23,40 @@ const deliverables = [
 
 export default function BlandToBrand() {
   return (
-    <div className="pt-48 pb-32 bg-sestra-cream min-h-screen">
-      <div className="editorial-container">
+    <div className="bg-sestra-cream min-h-screen pt-24 lg:pt-0">
+      
+      {/* Split Hero Section */}
+      <section className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[90vh] border-b border-sestra-teal/5">
         
-        {/* Hero Section */}
-        <header className="mb-48 grid grid-cols-1 lg:grid-cols-12 gap-20">
-          <div className="lg:col-span-8 space-y-12">
+        {/* Left Side: Dark / Content */}
+        <div className="bg-sestra-teal text-sestra-cream flex flex-col justify-center px-6 lg:px-20 py-24 lg:py-32 relative">
+          <div className="max-w-xl self-end space-y-12">
             <div className="space-y-6">
-              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-bold">
+              <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-gold/60 font-bold">
                 1:1 STRATEGY SESSION
               </span>
-              <h1 className="text-6xl md:text-9xl text-sestra-teal font-serif">
-                Bland to <br /> Brand<span className="serif-italic">.</span>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif leading-tight">
+                Bland to <br /> Brand<span className="serif-italic text-sestra-gold">.</span>
               </h1>
             </div>
-            <p className="text-xl md:text-2xl text-foreground/60 font-light italic leading-relaxed max-w-2xl">
-              A high-depth strategy session for the founder who has outgrown their current visuals and is ready for a brand that feels as premium as their work.
-            </p>
+            
+            <div className="flex gap-8 items-start pl-8 border-l border-sestra-gold/20">
+               <p className="text-xl md:text-2xl font-light italic leading-relaxed opacity-80">
+                 A high-depth strategy session for the founder who has outgrown their current visuals and is ready for a brand that feels as premium as their work.
+               </p>
+            </div>
           </div>
+          
+          {/* Main vertical divider (Desktop only) */}
+          <div className="absolute right-0 top-0 h-full w-[1px] bg-sestra-gold/10 hidden lg:block" />
+        </div>
 
-          <div className="lg:col-span-4 bg-white/50 border border-sestra-teal/5 p-12 space-y-8">
-             <div className="space-y-4">
-                <span className="text-[9px] uppercase tracking-widest text-sestra-teal/40 font-bold">The Session Details</span>
-                <ul className="space-y-6">
+        {/* Right Side: Light / Details Dashboard */}
+        <div className="bg-sestra-cream flex flex-col justify-center px-6 lg:px-20 py-24 lg:py-32">
+          <div className="max-w-md space-y-12">
+            <div className="space-y-4">
+               <span className="text-[9px] uppercase tracking-widest text-sestra-teal/40 font-bold">The Session Details</span>
+               <ul className="space-y-6">
                   {[
                     { label: "Format", val: "Virtual (Global)" },
                     { label: "Duration", val: "90 Minutes" },
@@ -53,19 +64,24 @@ export default function BlandToBrand() {
                     { label: "Investment", val: "On Inquiry" },
                     { label: "Availability", val: "Monday — Wednesday" },
                   ].map((item, i) => (
-                    <li key={i} className="flex justify-between items-center text-[10px] uppercase tracking-wider">
+                    <li key={i} className="flex justify-between items-center text-[10px] uppercase tracking-wider pb-4 border-b border-sestra-teal/5">
                       <span className="text-foreground/40">{item.label}</span>
                       <span className="text-sestra-teal font-bold">{item.val}</span>
                     </li>
                   ))}
                 </ul>
-             </div>
-             <div className="pt-6">
-                <Link href="/contact" className="btn-premium w-full text-center">Inquire to Book</Link>
-             </div>
+            </div>
+            
+            <div className="pt-6">
+               <Link href="/contact" className="btn-premium w-full text-center py-5">Inquire for Partnership</Link>
+            </div>
           </div>
-        </header>
+        </div>
+      </section>
 
+      {/* Main Page Content */}
+      <div className="editorial-container py-32">
+        
         {/* Audience Proof Section */}
         <section className="mb-48 space-y-24">
            <header className="text-center space-y-6">

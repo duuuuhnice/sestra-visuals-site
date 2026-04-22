@@ -1,51 +1,65 @@
+"use client";
+
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-sestra-sand pt-24 pb-12">
+    <footer className="bg-sestra-cream py-24 border-t border-sestra-teal/5">
       <div className="editorial-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 border-b border-sestra-teal/10 pb-16">
-          <div className="space-y-6">
-            <h2 className="text-2xl font-serif tracking-widest text-sestra-teal uppercase">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 lg:gap-32">
+          {/* Column 1: Studio */}
+          <div className="md:col-span-5 space-y-8">
+            <Link href="/" className="text-xl font-serif tracking-[0.2em] text-sestra-teal uppercase">
               Sestra Visuals
-            </h2>
-            <p className="text-sm text-foreground/60 max-w-xs">
+            </Link>
+            <p className="text-lg md:text-xl font-serif italic text-foreground/60 leading-relaxed font-light max-w-sm">
               Elevation through intentional design. Creating premium visual identities for conscious brands.
             </p>
+            <div className="pt-8">
+               <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-sestra-teal/40">ESTD. 2020 — Based in the Philippines, working globally.</p>
+            </div>
           </div>
-          
-          <div className="space-y-6">
-            <h3 className="text-xs uppercase tracking-[0.2em] font-sans font-bold text-sestra-teal/40">
-              Navigation
-            </h3>
-            <ul className="space-y-3">
-              <li><Link href="/about" className="text-sm hover:text-sestra-gold transition-colors">About Sestra</Link></li>
-              <li><Link href="/portfolio" className="text-sm hover:text-sestra-gold transition-colors">Our Portfolio</Link></li>
-              <li><Link href="/services" className="text-sm hover:text-sestra-gold transition-colors">Services & Packages</Link></li>
-              <li><Link href="/community" className="text-sm hover:text-sestra-gold transition-colors">Swan Elite</Link></li>
-              <li><Link href="/bland-to-brand" className="text-sm hover:text-sestra-gold transition-colors">Bland to Brand</Link></li>
-              <li><Link href="/contact" className="text-sm hover:text-sestra-gold transition-colors">Inquire Within</Link></li>
+
+          {/* Column 2: Navigation */}
+          <div className="md:col-span-3 space-y-8">
+            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-sestra-teal/40">Navigation</h4>
+            <ul className="space-y-4">
+              {["About Sestra", "Our Portfolio", "Services & Packages", "Inquire Within"].map((link) => (
+                <li key={link}>
+                  <Link 
+                    href={link === "Inquire Within" ? "/contact" : `/${link.toLowerCase().split(" ")[0]}`} 
+                    className="text-sm uppercase tracking-widest text-foreground/50 hover:text-sestra-teal transition-colors"
+                  >
+                    {link}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          <div className="space-y-6">
-            <h3 className="text-xs uppercase tracking-[0.2em] font-sans font-bold text-sestra-teal/40">
-              Connect
-            </h3>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-sm hover:text-sestra-gold transition-colors">Instagram</a></li>
-              <li><a href="#" className="text-sm hover:text-sestra-gold transition-colors">Pinterest</a></li>
-              <li><a href="#" className="text-sm hover:text-sestra-gold transition-colors">LinkedIn</a></li>
-              <li><a href="mailto:hello@sestravisuals.com" className="text-sm hover:text-sestra-gold transition-colors">hello@sestravisuals.com</a></li>
+          {/* Column 3: Connect */}
+          <div className="md:col-span-4 space-y-8">
+            <h4 className="text-[10px] uppercase tracking-[0.4em] font-bold text-sestra-teal/40">Connect</h4>
+            <ul className="space-y-4">
+              {["Instagram", "Pinterest", "LinkedIn", "hello@sestravisuals.com"].map((link) => (
+                <li key={link}>
+                  <a 
+                    href={link.includes("@") ? `mailto:${link}` : "#"} 
+                    className="text-sm uppercase tracking-widest text-foreground/50 hover:text-sestra-teal transition-colors"
+                  >
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs text-foreground/40 font-sans tracking-widest uppercase">
-            &copy; {new Date().getFullYear()} Sestra Visuals. All Rights Reserved.
+        <div className="mt-32 pt-8 border-t border-sestra-teal/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-[10px] uppercase tracking-widest text-foreground/30 font-bold">
+            © {new Date().getFullYear()} Sestra Visuals. All rights reserved.
           </p>
-          <p className="text-xs text-foreground/40 font-sans tracking-widest uppercase italic">
+          <p className="text-[10px] uppercase tracking-widest text-foreground/30 italic font-serif">
             Rooted in love, framed by intention.
           </p>
         </div>

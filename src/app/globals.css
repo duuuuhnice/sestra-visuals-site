@@ -44,3 +44,9 @@ body {
 .btn-premium {
   @apply px-8 py-3 bg-sestra-teal text-sestra-cream text-sm uppercase tracking-widest hover:bg-sestra-mahogany transition-all duration-500 rounded-full;
 }
+
+@layer utilities {
+  .serif-italic {
+    @apply font-serif italic text-sestra-mahogany font-light;
+  }
+}

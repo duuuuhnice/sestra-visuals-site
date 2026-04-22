@@ -18,7 +18,6 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Services", href: "/services" },
@@ -29,26 +28,26 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-sestra-cream/80 backdrop-blur-md py-4 border-b border-sestra-sand" : "bg-transparent py-8"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-700 ${
+        scrolled ? "bg-sestra-cream/90 backdrop-blur-md py-6 border-b border-sestra-teal/5" : "bg-transparent py-10"
       }`}
     >
       <div className="editorial-container flex justify-between items-center">
-        <Link href="/" className="text-2xl font-serif tracking-widest text-sestra-teal uppercase">
+        <Link href="/" className="text-xl md:text-2xl font-serif tracking-[0.2em] text-sestra-teal uppercase">
           Sestra Visuals
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex space-x-12">
+        <div className="hidden lg:flex space-x-10 items-center">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="nav-link">
+            <Link key={link.name} href={link.href} className="text-[10px] uppercase tracking-[0.3em] font-bold text-sestra-teal/60 hover:text-sestra-teal transition-all">
               {link.name}
             </Link>
           ))}
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-sestra-teal" onClick={() => setIsOpen(!isOpen)}>
+        <button className="lg:hidden text-sestra-teal" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -60,14 +59,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-sestra-cream border-b border-sestra-sand py-10 md:hidden"
+            className="absolute top-full left-0 w-full bg-sestra-cream border-b border-sestra-sand py-16 lg:hidden shadow-2xl"
           >
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-10">
               {navLinks.map((link) => (
                 <Link 
                   key={link.name} 
                   href={link.href} 
-                  className="nav-link text-lg"
+                  className="text-xs uppercase tracking-[0.4em] font-bold text-sestra-teal/60 hover:text-sestra-teal transition-all"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}

@@ -26,9 +26,9 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-9xl mb-12 text-sestra-teal"
+            className="text-4xl md:text-6xl lg:text-7xl mb-12 text-sestra-teal font-serif lowercase"
           >
-            Sestra Visuals
+            Where brands become felt, not just seen.
           </motion.h1>
           
           <motion.div
@@ -67,12 +67,14 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative aspect-[4/5] bg-sestra-sand"
+              className="relative aspect-[4/5] bg-sestra-sand overflow-hidden"
             >
-               {/* Placeholder for brand photo */}
-               <div className="absolute inset-0 flex items-center justify-center text-sestra-teal/20 italic font-serif text-2xl p-12 text-center">
-                 [ Brand Imagery: Coastal, Organic, Premium ]
-               </div>
+               <Image 
+                 src="/images/hero-brand.png" 
+                 alt="Sestra Visuals Studio"
+                 fill
+                 className="object-cover"
+               />
             </motion.div>
             
             <div className="space-y-8">
@@ -86,6 +88,21 @@ export default function Home() {
               <p className="text-base text-foreground/60 leading-loose">
                 Sestra Visuals is a high-end conscious branding studio designed for the visionaries, the seekers, and the builders of soulful empires. We blend strategic depth with ethereal aesthetics to frame your brand in its most authentic, premium light.
               </p>
+              
+              <div className="grid grid-cols-3 gap-8 pt-8">
+                <div className="space-y-1">
+                  <p className="text-2xl font-serif text-sestra-teal">5+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40">Years in Practice</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-2xl font-serif text-sestra-teal">80+</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40">Brands Elevated</p>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-2xl font-serif text-sestra-teal">8-Fig</p>
+                  <p className="text-[10px] uppercase tracking-widest text-foreground/40">Client Tier</p>
+                </div>
+              </div>
               <Link href="/about" className="inline-block text-xs uppercase tracking-[0.3em] font-sans border-b border-sestra-teal/20 pb-2 hover:border-sestra-teal transition-all">
                 The Philosophy
               </Link>

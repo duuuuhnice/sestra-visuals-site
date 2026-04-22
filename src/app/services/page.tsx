@@ -27,13 +27,25 @@ export default function Services() {
     {
       title: "Visual Curation",
       subtitle: "The Creative Partnership",
-      duration: "Ongoing",
+      duration: "3 Weeks",
       features: [
-        "Monthly Creative Support",
         "Art Direction",
-        "Content Strategy",
-        "Campaign Visuals",
-        "Continuous Brand Evolution"
+        "Digital Presence Curation",
+        "Content Strategy Alignment",
+        "Editorial Visuals",
+        "Monthly Brand Preservation"
+      ]
+    },
+    {
+      title: "The Sovereign Brand Experience",
+      subtitle: "The Legacy Builder",
+      duration: "12+ Weeks",
+      features: [
+        "High-End Full Brand Transformation",
+        "Custom Performance Web Engine",
+        "Marketing Funnel Architecture",
+        "Social Launch Campaign",
+        "Exclusive Strategy Retainer"
       ]
     }
   ];

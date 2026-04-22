@@ -22,6 +22,8 @@ const Footer = () => {
               <li><Link href="/about" className="text-sm hover:text-sestra-gold transition-colors">About Sestra</Link></li>
               <li><Link href="/portfolio" className="text-sm hover:text-sestra-gold transition-colors">Our Portfolio</Link></li>
               <li><Link href="/services" className="text-sm hover:text-sestra-gold transition-colors">Services & Packages</Link></li>
+              <li><Link href="/community" className="text-sm hover:text-sestra-gold transition-colors">Swan Elite</Link></li>
+              <li><Link href="/bland-to-brand" className="text-sm hover:text-sestra-gold transition-colors">Bland to Brand</Link></li>
               <li><Link href="/contact" className="text-sm hover:text-sestra-gold transition-colors">Inquire Within</Link></li>
             </ul>
           </div>

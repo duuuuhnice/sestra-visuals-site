@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -6,17 +7,20 @@ export default function About() {
       <div className="editorial-container">
         <div className="max-w-4xl mx-auto space-y-24">
           <section className="text-center space-y-8">
-            <h1 className="text-5xl md:text-7xl text-sestra-teal">The Sestra Narrative</h1>
+            <h1 className="text-5xl md:text-7xl text-sestra-teal font-serif italic">The story behind the studio.</h1>
             <p className="text-sm uppercase tracking-[0.4em] text-foreground/40 font-sans">
               Rooted in Intent · Elevated by Design
             </p>
           </section>
 
           <section className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-            <div className="relative aspect-[3/4] bg-sestra-sand h-[600px]">
-              <div className="absolute inset-0 flex items-center justify-center text-sestra-teal/20 italic font-serif text-xl p-10 text-center">
-                [ Denice Portrait: Minimalist, Natural Light, Professional ]
-              </div>
+            <div className="relative aspect-[3/4] bg-sestra-sand h-[600px] overflow-hidden">
+              <Image 
+                src="/images/denice-portrait.png" 
+                alt="Denice - Sestra Visuals"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="space-y-8">
               <h2 className="text-3xl md:text-4xl text-sestra-teal">Hi, I'm Denice.</h2>
@@ -40,16 +44,16 @@ export default function About() {
             <h2 className="text-4xl text-center text-sestra-teal">The Sestra Approach</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
               <div className="space-y-4">
-                <span className="text-sestra-gold text-2xl font-serif italic">01. Discovery</span>
-                <p className="text-sm text-foreground/50">Unearthing the soul of your brand through deep inquiry and strategic mapping.</p>
+                <span className="text-sestra-teal text-xl uppercase tracking-widest font-bold">Soul</span>
+                <p className="text-sm text-foreground/50">Unearthing your brand’s truest purpose and intentional narrative.</p>
               </div>
               <div className="space-y-4">
-                <span className="text-sestra-gold text-2xl font-serif italic">02. Visual Alchemy</span>
-                <p className="text-sm text-foreground/50">Translating abstract values into a cohesive, high-end visual language.</p>
+                <span className="text-sestra-teal text-xl uppercase tracking-widest font-bold">Sense</span>
+                <p className="text-sm text-foreground/50">Translating that truth into a high-end, resonant visual language.</p>
               </div>
               <div className="space-y-4">
-                <span className="text-sestra-gold text-2xl font-serif italic">03. Embodiment</span>
-                <p className="text-sm text-foreground/50">Launching your new identity with clarity and confidence into the marketplace.</p>
+                <span className="text-sestra-teal text-xl uppercase tracking-widest font-bold">Strategy</span>
+                <p className="text-sm text-foreground/50">Launching your vision with precise direction and sustainable impact.</p>
               </div>
             </div>
           </section>

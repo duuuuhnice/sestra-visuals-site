@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Portfolio() {
   const projects = [
@@ -15,18 +16,33 @@ export default function Portfolio() {
   return (
     <div className="pt-40 pb-32">
       <div className="editorial-container">
-        <header className="mb-24 space-y-6">
-          <h1 className="text-5xl md:text-8xl text-sestra-teal">Work</h1>
-          <div className="flex flex-col md:flex-row justify-between gap-6 md:items-end">
-            <p className="text-sm uppercase tracking-[0.3em] text-foreground/40 max-w-sm">
-              A curated collection of visual narratives and strategic brand embodiments.
-            </p>
-            <div className="flex gap-8 text-[10px] uppercase tracking-widest text-foreground/50">
+        <header className="mb-24 space-y-8">
+          <h1 className="text-5xl md:text-8xl text-sestra-teal font-serif italic">Work</h1>
+          <div className="flex flex-col md:flex-row justify-between gap-12 md:items-end">
+            <div className="space-y-6 max-w-xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-foreground/40">
+                A curated collection of visual narratives.
+              </p>
+              <p className="text-lg text-foreground/60 leading-relaxed font-light italic">
+                "Each project here is a story of transformation — of a brand finding its truest, most resonant form."
+              </p>
+            </div>
+            <div className="flex gap-8 text-[10px] uppercase tracking-widest text-foreground/50 pb-2">
               <span className="border-b border-sestra-teal text-sestra-teal cursor-pointer">All</span>
               <span className="hover:text-sestra-teal cursor-pointer transition-colors">Branding</span>
               <span className="hover:text-sestra-teal cursor-pointer transition-colors">Digital</span>
               <span className="hover:text-sestra-teal cursor-pointer transition-colors">Package</span>
             </div>
+          </div>
+          
+          <div className="relative w-full h-[400px] bg-sestra-sand overflow-hidden">
+             <Image 
+               src="/images/portfolio-mood.png" 
+               alt="Portfolio Mood"
+               fill
+               className="object-cover opacity-80"
+             />
+             <div className="absolute inset-0 bg-sestra-teal/5" />
           </div>
         </header>
 

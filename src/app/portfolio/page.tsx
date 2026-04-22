@@ -1,76 +1,173 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
+
+const projects = [
+  { 
+    id: "01", 
+    title: "Lumina Wellness", 
+    category: "BRANDING · IDENTITY · STRATEGY", 
+    year: "© 2024",
+    filter: "BRANDING",
+    isFeatured: true 
+  },
+  { 
+    id: "02", 
+    title: "The Coastal Edit", 
+    category: "BRAND IDENTITY", 
+    year: "© 2024",
+    filter: "BRANDING",
+    isFeatured: false 
+  },
+  { 
+    id: "03", 
+    title: "Aura Skincare", 
+    category: "PACKAGING · VISUAL IDENTITY", 
+    year: "© 2024",
+    filter: "PACKAGING",
+    isFeatured: false 
+  },
+  { 
+    id: "04", 
+    title: "Nordic Haven", 
+    category: "INTERIOR CURATION · DIGITAL", 
+    year: "© 2024",
+    filter: "DIGITAL",
+    isFeatured: false 
+  },
+  { 
+    id: "05", 
+    title: "Amoura Studio", 
+    category: "BRAND MESSAGING · CONTENT", 
+    year: "© 2024",
+    filter: "BRANDING",
+    isFeatured: false 
+  },
+  { 
+    id: "06", 
+    title: "Brand No. 6", 
+    category: "DIGITAL · STRATEGY", 
+    year: "© 2023",
+    filter: "DIGITAL",
+    isFeatured: false 
+  },
+];
+
+const filters = ["ALL", "BRANDING", "DIGITAL", "PACKAGING"];
 
 export default function Portfolio() {
-  const projects = [
-    { id: 1, title: "Lumina Wellness", category: "Branding", color: "bg-[#E8E1CC]" },
-    { id: 2, title: "The Coastal Edit", category: "Brand Identity", color: "bg-[#D6C9AE]" },
-    { id: 3, title: "Aura Skincare", category: "Packaging", color: "bg-[#E0D5C0]" },
-    { id: 4, title: "Nordic Haven", category: "Interior Curation", color: "bg-[#C8C4A0]" },
-    { id: 5, title: "Sōl Collective", category: "Strategy", color: "bg-[#EDE6D2]" },
-    { id: 6, title: "Verdant Living", category: "Digital Design", color: "bg-[#D4D0B0]" },
-  ];
+  const [activeFilter, setActiveFilter] = useState("ALL");
+
+  const filteredProjects = activeFilter === "ALL" 
+    ? projects 
+    : projects.filter(p => p.filter === activeFilter);
 
   return (
-    <div className="pt-40 pb-32">
+    <div className="pt-48 pb-32 bg-sestra-cream min-h-screen">
       <div className="editorial-container">
-        <header className="mb-24 space-y-8">
-          <h1 className="text-5xl md:text-8xl text-sestra-teal font-serif italic">Work</h1>
-          <div className="flex flex-col md:flex-row justify-between gap-12 md:items-end">
-            <div className="space-y-6 max-w-xl">
-              <p className="text-sm uppercase tracking-[0.3em] text-foreground/40">
-                A curated collection of visual narratives.
+        {/* Hero Section */}
+        <header className="mb-32 space-y-12">
+          <div className="space-y-6">
+            <span className="text-[10px] uppercase tracking-[0.5em] text-sestra-teal/40 font-bold">
+              A CURATED COLLECTION OF VISUAL NARRATIVES
+            </span>
+            <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-12">
+              <h1 className="text-6xl md:text-9xl text-sestra-teal font-serif">
+                Work<span className="serif-italic">.</span>
+              </h1>
+              <p className="text-lg text-foreground/60 max-w-xl leading-relaxed font-light italic">
+                Each project here is a story of transformation — of a brand finding its truest, most resonant form. Browse by type or explore the full collection below.
               </p>
-              <p className="text-lg text-foreground/60 leading-relaxed font-light italic">
-                "Each project here is a story of transformation — of a brand finding its truest, most resonant form."
-              </p>
-            </div>
-            <div className="flex gap-8 text-[10px] uppercase tracking-widest text-foreground/50 pb-2">
-              <span className="border-b border-sestra-teal text-sestra-teal cursor-pointer">All</span>
-              <span className="hover:text-sestra-teal cursor-pointer transition-colors">Branding</span>
-              <span className="hover:text-sestra-teal cursor-pointer transition-colors">Digital</span>
-              <span className="hover:text-sestra-teal cursor-pointer transition-colors">Package</span>
             </div>
           </div>
-          
-          <div className="relative w-full h-[400px] bg-sestra-sand overflow-hidden">
-             <Image 
-               src="/images/portfolio-mood.png" 
-               alt="Portfolio Mood"
-               fill
-               className="object-cover opacity-80"
-             />
-             <div className="absolute inset-0 bg-sestra-teal/5" />
+
+          {/* Filtering */}
+          <div className="pt-12 border-t border-sestra-teal/5">
+            <div className="flex gap-12 text-[10px] uppercase tracking-[0.4em] font-bold">
+              {filters.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`transition-all duration-500 relative pb-4 ${
+                    activeFilter === filter ? "text-sestra-teal" : "text-sestra-teal/30 hover:text-sestra-teal/60"
+                  }`}
+                >
+                  {filter}
+                  {activeFilter === filter && (
+                    <motion.div 
+                      layoutId="activeFilter"
+                      className="absolute bottom-0 left-0 w-full h-[1px] bg-sestra-teal" 
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-16">
-          {projects.map((project, idx) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: idx * 0.1 }}
-              className="group cursor-pointer"
+        {/* Project Grid */}
+        <div className="space-y-32">
+          <AnimatePresence mode="wait">
+            <motion.div 
+              key={activeFilter}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-32"
             >
-              <div className={`relative aspect-[16/10] overflow-hidden ${project.color} transition-transform duration-1000 group-hover:scale-[1.02]`}>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-sestra-teal/10 font-serif text-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700">View Project</span>
+              {filteredProjects.map((project, idx) => (
+                <div 
+                  key={project.id}
+                  className={`group space-y-10 ${project.isFeatured ? "md:col-span-2" : ""}`}
+                >
+                  <div className={`relative overflow-hidden bg-sestra-sand/40 ${project.isFeatured ? "aspect-[21/9]" : "aspect-[4/5]"}`}>
+                    <div className="absolute inset-0 bg-sestra-teal/0 group-hover:bg-sestra-teal/10 transition-all duration-700 z-10" />
+                    {project.isFeatured && (
+                       <div className="absolute top-8 left-8 z-20">
+                          <span className="px-4 py-2 bg-white/90 backdrop-blur-md text-[9px] uppercase tracking-widest font-bold text-sestra-teal">Featured Project</span>
+                       </div>
+                    )}
+                    <div className="absolute top-8 right-8 z-20">
+                       <span className="text-[10px] text-sestra-teal/40 font-serif italic">Nº {project.id}</span>
+                    </div>
+                    {/* Project Mood Image (Simplified for clone) */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-1000 z-20">
+                       <span className="text-xs uppercase tracking-[0.4em] text-sestra-teal/60 font-bold border-b border-sestra-teal/20 pb-2">View Project</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-start pb-8 border-b border-sestra-teal/5">
+                    <div className="space-y-4">
+                      <h2 className="text-3xl md:text-5xl text-sestra-teal font-serif group-hover:text-sestra-mahogany transition-colors duration-500">
+                        {project.title}
+                      </h2>
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-foreground/40 font-bold">
+                        {project.category}
+                      </p>
+                    </div>
+                    <span className="text-xs text-foreground/30 font-serif italic">{project.year}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="mt-8 flex justify-between items-start">
-                <div>
-                  <h2 className="text-2xl text-sestra-teal">{project.title}</h2>
-                  <p className="text-xs uppercase tracking-widest text-foreground/40 mt-2">{project.category}</p>
-                </div>
-                <span className="text-[10px] uppercase tracking-widest text-foreground/30">© 2024</span>
-              </div>
+              ))}
             </motion.div>
-          ))}
+          </AnimatePresence>
         </div>
+
+        {/* Footer CTA */}
+        <section className="mt-48 pt-32 border-t border-sestra-teal/5 text-center space-y-16">
+          <h2 className="text-4xl md:text-7xl text-sestra-teal font-serif">
+            Ready to see your name <br className="hidden md:block" /> in this <span className="serif-italic">collection?</span>
+          </h2>
+          <div className="pt-8">
+            <Link href="/contact" className="btn-premium px-16">
+              Begin Your Narrative
+            </Link>
+          </div>
+        </section>
       </div>
     </div>
   );
